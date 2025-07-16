@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Stuart Watkinson | Cheffin' it Up</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header" class="alt style2">
+			<a href="index.html" class="logo"><strong>Stuart Watkinson</strong> <span>Games Programmer and
+					Designer</span></a>
+			<nav>
+				<a href="https://github.com/Stuart-Watkinson" class="icon brands alt fa-github"><span
+						class="label">GitHub</span></a>
+				<a href="https://www.linkedin.com/in/stuart-watkinson-b33387334/"
+					class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a>
+			</nav>
+		</header>
+
+
+		<!-- Main -->
+		<div id="main" class="alt">
+
+			<!-- One -->
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h1><span>Cheffin' it Up</h1>
+					</header>
+					<span class="image main"><img src="images/chefShowcase.gif" style="position: relative; top: -40px;"
+							alt="" /></span>
+					<div class="row gtr-100" style="position: relative; top: -70px;">
+						<div class="col-4 col-14-xsmall">
+							<div class="box">
+								<h3 style="position: relative; bottom: 20px;"><u>Details</u></h3>
+								<p> <b>Role:</b> Gameplay Programmer<br> <b>Duration:</b> 8 Weeks
+									<br> <b>Team Size:</b> 1
+									<br><b>Engine:</b> Unity (C#)
+								</p>
+							</div>
+						</div>
+						<div class="col-8 col-14-xsmall">
+							<div class="box">
+								<h3 style="position: relative; bottom: 20px; "><u>About</u></h3>
+								<p>Cheffin' it up was a graded assignment in my second semester at the University of
+									Staffordshire. The project was my first ventrue into using the Unity Engine,
+									featuring a crafting system and points system that is saved locally and compared to
+									10 of your other top scores.</p>
+							</div>
+						</div>
+					</div>
+					<div style="position: relative; top: -70px">
+						<h2>Introduction</h2>
+						<p>
+							The goal of this project was to create a 2D Top-Down game with multipictive mechanics,
+							providing a full gameplay experince. I really wanted to focus on the mechanics of this
+							project,
+							and ensure they are not only robust but fun to play around.
+							This want lead to me coming to idea of taking inspiration from vampire survivors,
+							as the horde survivor genre of games creates opporunity for a playground in where the
+							players can freely interact with the mechanics.
+							<br><br>
+							The focus of the games development went into the<b><i> crafting system</b></i>, <b><i>
+									shooting</b></i> and <b><i>high score save system</b></i>.
+							Each of these forced me to tackle problem solving outside of what I already knew,
+							to not only complete the project but also too create a product I was happy with.
+						</p>
+						<h2>Crafting, Items and Inventory</h2>
+						<!--Crafting Media-->
+						<div>
+							<span class="image"><img src="images/chefCraftingDesign.jpg.png"
+									style="position: relative; top: -30px; " alt="" /></span>
+							<span class="image"><img src="images/chefCrafting1-30.gif"
+									style="position: relative; top: -30px; left: 10px;" alt="" /></span>
+							<p style="position: relative; top: -20px;">From design to implementation</p>
+						</div>
+
+						<p>
+							The crafting mechanic uses the 'name' variable of the item scriptable objects to check for a
+							valid crafting recipe.
+							Each recipe contains the three item names used in a matter such as "wheatmeatcheese",
+							once the player presses the *cook* button a string search is used (as long as all 3 slots
+							are filled)
+							to compare the current string of names against the recipe list.
+							If a recipe is successfully found the apporiate cooked food scriptable object will be
+							created.
+							<br><br>
+							Originally the crafting system was a simple backdrop to learning how to create an inventory
+							system in unity,
+							while also having more unique items (current implementation are simple stat changes).
+							However, as the focus of the project was to create intiative multipicitve gameplay
+							mechanics, as such
+							I shifted focus and scope to give the needed time for the main mechanic to be properly
+							developed.
+							On top of this, I made the decision to simplfy its design, design was gonna feature a
+							cooking pot with VFX,
+							so that all of the needed information was clear to the player without clutter.
+							<br><br>
+							The crafting system itself was not all too difficult to implement once I had found my method
+							of implementation,
+							and made the above design descisions. Where I found the difficulty was the inventory system
+							itself.
+							Being new to Untiy and having never created a system like this before, I spent alot of time
+							iterating the inventory.
+							While an inventory itself is as simple as using a List to insert and remove items to/from
+							the players inventory,
+							the complications arised from attempting to take this system further, namely, the looting
+							and drag and drop systems.
+							<br><br>
+							These issues arised due to poor planning on my behalf, rushing into coding without a plan is
+							rule 1 of what not to do,
+							and yet I did it none the less. Simple stepping back and looking at the already established
+							system.
+							I realised that I didn't need to needlessly tack on new systems, I just had to correctly
+							utilise my already established
+							object-oriented programming fundamentals to use a linked simplified system,
+							to hand over references to differnet scripts in a web like manner.
+							This system alone taught me so much about proper programming fundamentals, while getting
+							first hand experience of the do's and don'ts.
+							<br><br>
+							The Drag and Drop system utilises the Unity's interfaces:
+							<ul>
+							IBeginDragHandler<br>
+							IDragHandler<br>
+							IEndDragHandler
+							</ul>
+							This helped to simplfy the inventory to crafting systems, as a drag and drop is used in many
+							such systems.
+							I had issues in where items could not be swapped once added to the inventory,
+							as such I created a script utilising the IDropHandler interface to either
+							remove the placeholder empty item or to create a temporary reference to the item in the slot
+							to
+							then replace it with teh selected item before swapping the replaced item into the previous
+							slot.
+						</p>
+
+						<h2>Shooting</h2>
+						<h2>High Score</h2>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
