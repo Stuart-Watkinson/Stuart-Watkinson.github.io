@@ -2950,9 +2950,9 @@ input, select, textarea {
 				background-position: center center;
 				background-size: cover;
 				border-radius: 0;
-				display: block;
+				display: box;
 				position: relative;
-				width: 30%;
+				width: 100%;
 			}
 
 				.spotlights > section > .image img {
@@ -2991,7 +2991,7 @@ input, select, textarea {
 				-ms-align-items: center;
 				align-items: center;
 				padding: 2em 3em 0.1em 3em ;
-				width: 70%;
+				width: 50%;
 			}
 
 				.spotlights > section > .content > .inner {
