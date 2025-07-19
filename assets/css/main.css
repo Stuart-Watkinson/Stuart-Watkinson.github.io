@@ -2223,6 +2223,13 @@ input, select, textarea {
 
 			}
 
+	.image-text
+	{
+		font-size: 15px;
+		color: #d0e8f7;
+		font-style: italic;
+	}
+
 /* List */
 
 	ol {
@@ -2990,7 +2997,7 @@ input, select, textarea {
 				-webkit-align-items: center;
 				-ms-align-items: center;
 				align-items: center;
-				padding: 2em 3em 0.1em 3em ;
+				padding: 0em 0em 0em 3em ;
 				width: 50%;
 			}
 

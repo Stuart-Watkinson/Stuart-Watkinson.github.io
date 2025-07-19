@@ -49,7 +49,7 @@
 						<div class="col-4 col-14-xsmall">
 							<div class="box">
 								<h3 style="position: relative; bottom: 20px;"><u>Details</u></h3>
-								<p> <b>Role:</b> Gameplay Programmer<br> <b>Duration:</b> 8 Weeks
+								<p> <b>Role:</b> Gameplay Programmer<br> <b>Duration:</b> 5 Weeks
 									<br> <b>Team Size:</b> 1
 									<br><b>Engine:</b> Unity (C#)
 								</p>
@@ -59,7 +59,7 @@
 							<div class="box">
 								<h3 style="position: relative; bottom: 20px; "><u>About</u></h3>
 								<p>Cheffin' it up was a graded assignment in my second semester at the University of
-									Staffordshire. The project was my first ventrue into using the Unity Engine,
+									Staffordshire. The project was my first venture into using the Unity Engine,
 									featuring a crafting system and points system that is saved locally and compared to
 									10 of your other top scores.</p>
 							</div>
@@ -69,7 +69,7 @@
 						<h2>Introduction</h2>
 						<p>
 							The goal of this project was to create a 2D Top-Down game with multipictive mechanics,
-							providing a full gameplay experince. I really wanted to focus on the mechanics of this
+							providing a full gameplay experience. I really wanted to focus on the mechanics of this
 							project,
 							and ensure they are not only robust but fun to play around.
 							This want lead to me coming to idea of taking inspiration from vampire survivors,
@@ -79,79 +79,81 @@
 							The focus of the games development went into the<b><i> crafting system</b></i>, <b><i>
 									shooting</b></i> and <b><i>high score save system</b></i>.
 							Each of these forced me to tackle problem solving outside of what I already knew,
-							to not only complete the project but also too create a product I was happy with.
+							to not only complete the project but also too create a product I was happy with. This was a
+							solo project, I had the responsbility for all the games coding and design, art and assets
+							belong to their respective creators.
 						</p>
 						<h2>Crafting, Items and Inventory</h2>
-						<!--Crafting Media-->
 						<div>
+							<!--Crafting Media-->
 							<span class="image"><img src="images/chefCraftingDesign.png"
 									style="position: relative; top: -30px; " alt="" /></span>
 							<span class="image"><img src="images/chefCrafting.gif"
 									style="position: relative; top: -30px; left: 10px;" alt="" /></span>
-							<p style="position: relative; top: -20px;">From design to implementation</p>
+							<p class="image-text" style="position: relative; top: -20px;">From design to implementation
+							</p>
 						</div>
 
 						<p>
-							The crafting mechanic uses the 'name' variable of the item scriptable objects to check for a
-							valid crafting recipe.
-							Each recipe contains the three item names used in a matter such as "wheatmeatcheese",
-							once the player presses the *cook* button a string search is used (as long as all 3 slots
-							are filled)
-							to compare the current string of names against the recipe list.
-							If a recipe is successfully found the apporiate cooked food scriptable object will be
-							created.
+							All three of these systems are built around Unity’s <b>Scriptable Objects</b> system.
+							Scriptable
+							objects are useful in reducing a projects memory usage by avoiding the need to create many
+							copies of the same values as it allows for singular copy in memory that is used as a
+							<b>reference</b>
+							for the stored values.
 							<br><br>
-							Originally the crafting system was a simple backdrop to learning how to create an inventory
-							system in unity,
-							while also having more unique items (current implementation are simple stat changes).
-							However, as the focus of the project was to create intiative multipicitve gameplay
-							mechanics, as such
-							I shifted focus and scope to give the needed time for the main mechanic to be properly
-							developed.
-							On top of this, I made the decision to simplfy its design, design was gonna feature a
-							cooking pot with VFX,
-							so that all of the needed information was clear to the player without clutter.
+							Due to the nature of creating a ‘horde-style’ game with constant item instantiations,
+							<b>performance was a key factor to consider</b> and wanting to use my project development as
+							a
+							means to better understand the unity engine all roads pointed to the use of Scriptable
+							Objects.
 							<br><br>
-							The crafting system itself was not all too difficult to implement once I had found my method
-							of implementation,
-							and made the above design descisions. Where I found the difficulty was the inventory system
-							itself.
-							Being new to Untiy and having never created a system like this before, I spent alot of time
-							iterating the inventory.
-							While an inventory itself is as simple as using a List to insert and remove items to/from
-							the players inventory,
-							the complications arised from attempting to take this system further, namely, the looting
-							and drag and drop systems.
+							The crafting system itself uses the objects ‘name’ variable to run a string search against
+							an established cooking recipe list. These recipes are written as such, “WheatMeatCheese”
+							with each being changed to match the given recipe. This system could be improved by
+							allowing flexibility in the crafting process, rather than having to place items into
+							specific slots,
+							this is something I hope to rectify in the future, the method used was picked as it
+							matched with the already established systems along side the use of scriptable
+							objects.
 							<br><br>
-							These issues arised due to poor planning on my behalf, rushing into coding without a plan is
-							rule 1 of what not to do,
-							and yet I did it none the less. Simple stepping back and looking at the already established
-							system.
-							I realised that I didn't need to needlessly tack on new systems, I just had to correctly
-							utilise my already established
-							object-oriented programming fundamentals to use a linked simplified system,
-							to hand over references to differnet scripts in a web like manner.
-							This system alone taught me so much about proper programming fundamentals, while getting
-							first hand experience of the do's and don'ts.
-							<br><br>
-							The Drag and Drop system utilises the Unity's interfaces:
-							<ul>
-							IBeginDragHandler<br>
-							IDragHandler<br>
-							IEndDragHandler
-							</ul>
-							This helped to simplfy the inventory to crafting systems, as a drag and drop is used in many
-							such systems.
-							I had issues in where items could not be swapped once added to the inventory,
-							as such I created a script utilising the IDropHandler interface to either
-							remove the placeholder empty item or to create a temporary reference to the item in the slot
-							to
-							then replace it with teh selected item before swapping the replaced item into the previous
-							slot.
-						</p>
-
+							The inventory system allowed me to interact with Unity’s interface systems. Namely the
+							IDragHandler & IBegin(/End)DragHandler interfaces. Interfaces define functionality within a
+							Unity Project, the three I mentioned are pre-built interfaces that define drag & drop
+							functionality, this isn't a simple copy and paste job however, these interfaces simple
+							provide tools to simplfy the creation of systems and using these tools I created a dynamic
+							inventory to crafting item swap.
 						<h2>Shooting</h2>
+						<p>
+							Early into development, the arrow keys were used to fire the player’s weapon. This meant that
+							the player could only fire in up to 8 directions, this wasn’t ideal for a game where threats
+							can approach you from any given direction. I had to make the decision to implement mouse
+							shooting, to better suit the <b>overall design and game feel</b>.
+							<br><br>
+							From talking to peers and lecturers, I came to the hard conclusion that it wasn’t a simple
+							transition from one to the other. I needed to understand a certain level of vector maths.
+							After a lot of research and <i>a lot</i> of trial and error, I came to understand that I had
+							taken a wrong approach to applying what I learnt. I couldn’t simply add it onto what I had
+							already created, I needed to create something new.
+							<br><br>
+							This led to a much smoother development, the system came out with very few hiccups that I
+							cleaned up throughout the project. I had been treating the player as the firing point,
+							however what was needed instead was a disembodied component that rotates around the player,
+							almost acting as a invisible gun for the projectiles to be fired from.
+
+						</p>
 						<h2>High Score</h2>
+						<div>
+							<!--Score Media-->
+							<span class="image"><img src="images/chefMetaData.png"
+									style="position: relative; top: -30px; " alt="" /></span>
+							<span class="image"><img src="images/chefScores.png"
+									style="position: relative; top: -30px; left: 10px;" alt="" /></span>
+							<p class="image-text" style="position: relative; top: -20px;">Meta data storage to game
+								output
+							</p>
+						</div>
+						<h2>What was Learnt</h2>
 					</div>
 				</div>
 			</section>
