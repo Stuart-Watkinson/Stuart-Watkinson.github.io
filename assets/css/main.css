@@ -156,15 +156,23 @@ input, select, textarea {
 		border-bottom: dotted 1px;
 		color: inherit;
 		text-decoration: none;
+		font-size: 30px;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #9bf1ff !important;
+			color: #c6e2fe !important;
 		}
 
 		a:active {
 			color: #53e3fb !important;
+		}
+	
+		a.text
+		{
+			font-style: italic;
+			color: #99c7f8;
+			font-weight: bold;
 		}
 
 	strong, b {
@@ -2086,6 +2094,7 @@ input, select, textarea {
 		border: solid 1px rgba(212, 212, 255, 0.1);
 		margin-bottom: 2em;
 		padding: 1.5em;
+		background-color: #202943;
 	}
 
 		.box > :last-child,

@@ -123,9 +123,14 @@
 							functionality, this isn't a simple copy and paste job however, these interfaces simple
 							provide tools to simplfy the creation of systems and using these tools I created a dynamic
 							inventory to crafting item swap.
+							<br><br>
+							<a class="text"
+								href="https://github.com/Stuart-Watkinson/Cheffin-ItUp/tree/main/Assets/Scripts/Inventory">Code
+								- Inventory</a>
 						<h2>Shooting</h2>
 						<p>
-							Early into development, the arrow keys were used to fire the player’s weapon. This meant that
+							Early into development, the arrow keys were used to fire the player’s weapon. This meant
+							that
 							the player could only fire in up to 8 directions, this wasn’t ideal for a game where threats
 							can approach you from any given direction. I had to make the decision to implement mouse
 							shooting, to better suit the <b>overall design and game feel</b>.
@@ -140,7 +145,10 @@
 							cleaned up throughout the project. I had been treating the player as the firing point,
 							however what was needed instead was a disembodied component that rotates around the player,
 							almost acting as a invisible gun for the projectiles to be fired from.
-
+							<br><br>
+							<a class="text"
+								href="https://github.com/Stuart-Watkinson/Cheffin-ItUp/blob/main/Assets/Scripts/Player/Weapons/ProjectileWeaponController.cs">Code
+								- Shooting</a>
 						</p>
 						<h2>High Score</h2>
 						<div>
@@ -149,11 +157,69 @@
 									style="position: relative; top: -30px; " alt="" /></span>
 							<span class="image"><img src="images/chefScores.png"
 									style="position: relative; top: -30px; left: 10px;" alt="" /></span>
-							<p class="image-text" style="position: relative; top: -20px;">Meta data storage to game
-								output
+							<p class="image-text" style="position: relative; top: -20px;">
+								Meta data storage to game output
 							</p>
 						</div>
+						<p>
+							To provide a true gameplay loop, I wanted to add more player incentive outside of just
+							playing the game. This started as a simple scoring system, the player gains scores for
+							certain actions. Including; crafting, survival time, and monsters killed, which would then
+							be totalled throughout the playtime before being displayed on the final screen. This was an
+							incredibly simple addition that I added early on, but as the games development was coming to
+							an end, I came to realise I should try to do more with this system.
+							<br><br>
+							After talking to lecturers about how I could add to this system, I was given multiple
+							options of how to approach a system such as score keeping. The use of a database was too
+							complex within the time frame I had left on the project, however the use of writing to file
+							was exactly what I was looking for. This is a common approach to game state saving afterall.
+							The Unity Engine has an implementation of <b>JSON <i>(JavaScript Object Notation)</i></b>,
+							making it
+							easy to seralize/deseralize data to store game states locally on a players PC.
+							<br><br>
+							What this really means is a <b>convertation between C# objects/structures into JSON
+								format</b>,
+							and vice versa. Having such a short time frame to research and implement JsonUtility into
+							the game, I was lucky to find that JSON is built to be easy for humans to read/write, and
+							simple for computers to parse the data. Using JSON I created a High Scores system, where a
+							players 10 highest scores is saved, this is then wrote to a .txt file locally on the
+							computer
+							to be displayed on the main menu.
+							<br><br>
+							<a class="text"
+								href="https://github.com/Stuart-Watkinson/Cheffin-ItUp/blob/main/Assets/Scripts/UI/ScoreManager.cs">Code
+								- Score Management</a>
+						</p>
 						<h2>What was Learnt</h2>
+						<p>
+							This was the first game I had developed start to finish within a game’s engine, and as such
+							it was a major learning experience. Despite having coded for years this was the most freedom
+							I had felt to create within education, for better and for worse, and due to the solo nature
+							of the project I found myself under/overestimating the scope of the project constantly. On
+							that front the greatest lesson I learnt throughout the project was <b>planning</b>, while I had
+							plans for the project, I had underestimated how every component I wanted to develop was so
+							much easier to work with once I broke it down into digestible segments. Decomposition has
+							been a principle I have learnt about for years, it was here where its usage finally clicked,
+							and I found the project to feel more like a puzzle to be solved rather than a labyrinth that
+							I could run headfirst into.
+							<br><br>
+							This was massively assisted with communications amongst peers and mentors, despite the solo
+							nature of the project, I would often find that having someone to bounce off ideas with or
+							lend an ear to, gave me a deeper understanding of what I was working with before I tackled
+							issues, helping me improve on new and old techniques and skills. Being able to work in a
+							space where open communication was incentivised felt <b>rewarding</b> when I could make the
+							results with the feeing.
+							<br><br>
+							On the technical front the Unity Engine was great to work. My aim with this project was to
+							utilise the engine to the best capability I could to reach a better understanding of its
+							implementation. The use of tools such as prefabs, scriptable objects and unity events helped
+							me better come to terms with the engine. Alongside JSONUtlity, I found that the engine
+							directly assisted the development throughout and I hope to better understand other features
+							within the engine in the future.
+							<br><br>
+							<a class="text"
+								href="https://github.com/Stuart-Watkinson/Cheffin-ItUp">Project Repository</a>
+						</p>
 					</div>
 				</div>
 			</section>
