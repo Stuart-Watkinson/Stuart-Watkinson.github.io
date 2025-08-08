@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Stuart Watkinson | Parklife</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header" class="alt style2">
+			<a href="index.html" class="logo"><strong>Stuart Watkinson</strong> <span>Games Programmer and
+					Designer</span></a>
+			<nav>
+				<a href="https://github.com/Stuart-Watkinson" class="icon brands alt fa-github"><span
+						class="label">GitHub</span></a>
+				<a href="https://www.linkedin.com/in/stuart-watkinson-b33387334/"
+					class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a>
+			</nav>
+		</header>
+
+
+		<!-- Main -->
+		<div id="main" class="alt">
+
+			<!-- One -->
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h1><span>Parklife</h1>
+					</header>
+					<span class="image main"><img src="images/sentinelShowcase.gif"
+							style="position: relative; top: -40px;" alt="" /></span>
+					<div class="row gtr-100" style="position: relative; top: -70px;">
+						<div class="col-4 col-14-xsmall">
+							<div class="box">
+								<h3 style="position: relative; bottom: 20px;"><u>Details</u></h3>
+								<p> <b>Role:</b> Gameplay Designer & Programmer<br> <b>Duration:</b> 6 Weeks
+									<br> <b>Team Size:</b> 1
+									<br><b>Engine:</b> Unity [C#]
+								</p>
+							</div>
+						</div>
+						<div class="col-8 col-14-xsmall">
+							<div class="box">
+								<h3 style="position: relative; bottom: 20px; "><u>About</u></h3>
+								<p>This project was a marked assessment at the University of Staffordshire. Developed
+									using 6 sets of sprints, each lasting a single week , under the theme of “telling a
+									story”.</p>
+							</div>
+						</div>
+					</div>
+					<div style="position: relative; top: -70px">
+						<h2>Introduction</h2>
+						<p>
+							The theming of this project gave me a blank canvas to work with, one which gave me plenty of
+							opportunity for exploration into systems I had not managed to grasp in previous projects.
+							While the projects have been smaller in scale, I still find it imperative that I <b>push
+								myself</b> to learn optimisation techniques within my code. In line with that thought I
+							wanted to take another look at C# events and their usage within games.
+							<br><br>
+							Furthermore, I wanted to experiment with creating unique combat systems for projects, to
+							give both players and enemies a different approach to combat than shooting or directly
+							running into the player to provide a more unique experience.
+						</p>
+						<h2>C# Events</h2>
+						<div>
+							<!--Level Media-->
+							<!-- <span class="image"><img src="images/bubbleMap.png"
+									style="position: relative; top: -30px; " alt="" /></span> -->
+							<!-- <span class="image"><img src="images/mapOverhead.png"
+									style="position: relative; top: -30px;" alt="" /></span>
+							<p class="image-text" style="position: relative; top: -20px;">From design to implementation
+							</p> -->
+						</div>
+						<p>
+							In previous projects I had began to implement C# events, using them to create a robust
+							player input controller. From both personal interest and a push from lecturers I decided to
+							delve deeper into using them. Previously I had been using references to connect code, what
+							while still having its uses within my code, the use of C# events allows for me to decouple
+							my code and follow the single dependency, and other such principles better. For this project
+							I have used C# events for <b>health related events</b> such as taking damage or dying, this
+							script didn’t need to share its functions publicly but could be used to send the needed data
+							to any of the <b>“subscribers”</b>, in this case the enemies and player character.
+						</p>
+
+						<h2>Custom Box Physics</h2>
+						<div>
+							<!-- Level Media
+							<span class="image"><img src="images/bubbleMap.png"
+									style="position: relative; top: -30px; " alt="" /></span> -->
+							<!-- <span class="image"><img src="images/mapOverhead.png"
+									style="position: relative; top: -30px;" alt="" /></span>
+							<p class="image-text" style="position: relative; top: -20px;">From design to implementation
+							</p> -->
+						</div>
+						<p>
+							The projects central mechanic was the players ability to shove into objects and enemies,
+							while the interaction with enemies was quite simple, creating an interact able object took a
+							different approach. I used unity’s collision system as a checker, once a player has
+							attempted to shove the object a ray cast is sent out in the opposite direction to find a
+							piece of the level. Which is then moved towards the found destination, casting a circle cast
+							to check for enemies collided with.
+							<br><br>
+							After having feedback from play testers, I was told while the system was fun it felt like it
+							couldn’t be used more than a few times due to objects being stuck, thus I added a ‘bounce’.
+							This is where the problems arose, due to the system using world coordinations, reversing the
+							coordinates used for the initial movement resulted in the object trying to move to the other
+							side of the ‘world-space’. To remedy this I stored where the location the player hit the
+							object, before moving it towards that Vector for only a moment to unstick it.
+						</p>
+
+						<h2>What was Learnt</h2>
+						<p>
+							Originally I had conceptilised a different game concept. The game was following the idea of
+							'a walk through the park', focusing on the story aspect with the world around the player
+							changing, the idea was to have it move through the seasons as you got through the park.
+							While an interesting idea, I only had a short time frame to develop this prototype, and the
+							idea felt like it would be wasted and lack mechanics if used in prototyping. This shake-up
+							of concepts initally sent a wave of disruptions throughout the project, however due to
+							employing the use of <b>agile sprints</b>, I took a step back and re-evaluated the scope and
+							idea to fit into the smaller development window created by the set backs. Reusing the park
+							concept to instead tell a story of saving a park from bug infestion.
+							<br><br>
+							What this experience taught me was the importance of being able to <b>adapt</b>. Whether
+							that be self-evaluted changes, or changes within a team software development is never a
+							straight line. The use of sprints allows for the progress of a project to be broken into
+							chunks to be evaluted at the start of each iteration. Agile sprints perfectly encapsulate my
+							work flow, allowing me to way up the 'weight' of getting whats needed done while still
+							leaving room for <b>experimentation and learning</b> where room can be found.
+
+							<!-- <br><br>
+							<a class="text"
+								href="https://github.com/Stuart-Watkinson/Cheffin-ItUp">Project Repository</a> -->
+						</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
