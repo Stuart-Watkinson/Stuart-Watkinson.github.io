@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Stuart Watkinson | Graphics Loader</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header" class="alt style2">
+			<a href="index.html" class="logo"><strong>Stuart Watkinson</strong> <span>Games Programmer and
+					Designer</span></a>
+			<nav>
+				<a href="https://github.com/Stuart-Watkinson" class="icon brands alt fa-github"><span
+						class="label">GitHub</span></a>
+				<a href="https://www.linkedin.com/in/stuart-watkinson-b33387334/"
+					class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a>
+			</nav>
+		</header>
+
+
+		<!-- Main -->
+		<div id="main" class="alt">
+
+			<!-- One -->
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h1><span>Graphics Loader</h1>
+					</header>
+					<span class="image main"><img src="" style="position: relative; top: -40px;" alt="" /></span>
+					<div class="row gtr-100" style="position: relative; top: -70px;">
+						<div class="col-4 col-14-xsmall">
+							<div class="box">
+								<h3 style="position: relative; bottom: 20px;"><u>Details</u></h3>
+								<p> <b>Role:</b> Gameplay Designer & Programmer<br> <b>Duration:</b> 6 Weeks
+									<br> <b>Team Size:</b> 1
+									<br><b>Engine:</b> Unity [C#]
+								</p>
+							</div>
+						</div>
+						<div class="col-8 col-14-xsmall">
+							<div class="box">
+								<h3 style="position: relative; bottom: 20px; "><u>About</u></h3>
+								<p>This was a marked assessment in my third term at the University of Staffordshire. I
+									was tasked with creating a scene using computer graphics generated using OpenGL in
+									C++. Graphics can be loaded from files and are converted into programmable graphics
+									to be placed within the scene.</p>
+							</div>
+						</div>
+					</div>
+					<div style="position: relative; top: -70px">
+						<h2>Introduction</h2>
+						<p>
+							For this assessment we were given a different focus than creating a game experience.
+							Instead, focusing in on how games graphics can be generated and managed manually, using
+							<b>OpenGL</b> to create systems to manually build primitive shapes, while loading textures
+							and more complex shapes from file.
+							<br><br>
+							As the systems were all being built outside of an engine all of the optimisation was up to
+							me, this gave me an opportunity for a lesson in <b>memory management</b>, using Visual
+							Studio to track where memory is being assigned. This could then be used to track when issues
+							such as memory leaks would appear and break down how the issue could be tackled.
+						</p>
+						<h2>OBJ File Loader</h2>
+						<div>
+							<!--Level Media-->
+							<!-- <span class="image"><img src="images/bubbleMap.png"
+									style="position: relative; top: -30px; " alt="" /></span> -->
+							<!-- <span class="image"><img src="images/mapOverhead.png"
+									style="position: relative; top: -30px;" alt="" /></span>
+							<p class="image-text" style="position: relative; top: -20px;">From design to implementation
+							</p> -->
+						</div>
+						<p>
+							The project as a whole uses file loading to assign values in a more concise manner for
+							primitive shapes, taking the values for vecrtices, indices and faces. This is a simple level
+							of file usage when used with primitivies, the same level of simplicity does not work for the
+							use of OBJ files.
+							<br><br>
+							To create my OBJ file loader I found many sources leading me towards using text manipulation
+							to find all of the needed values and correctly assign them to their variables, using
+							<i>‘f’</i> for indices and <i>‘v’</i> for vertices, furthermore subtracting the indices by 1
+							from all index readings from the file as the file starts counting from 1 not 0. Using a C++
+							vector (also known as a list), we can store all the needed values as they are read to be
+							used later to build the object at runtime.
+							<br><br>
+							I found difficulty understanding how I could build the system from the ground up, with my
+							already established systems. After finding a tutorial that clicked, alongside deeper
+							research into OpenGL and graphical programming as a whole, I was able to successfully create
+							the system that can be found below. My only wish is to make it more robust in future to
+							support a larger variety of OBJ files.
+
+							<br><br>
+							<a class="text"
+								href="https://github.com/Stuart-Watkinson/HelloGL/blob/main/OBJLoader.cpp">Code
+								- OBJ Loader</a>
+						</p>
+
+						<h2>Scene Management</h2>
+						<div>
+							<!-- Level Media
+							<span class="image"><img src="images/bubbleMap.png"
+									style="position: relative; top: -30px; " alt="" /></span> -->
+							<!-- <span class="image"><img src="images/mapOverhead.png"
+									style="position: relative; top: -30px;" alt="" /></span>
+							<p class="image-text" style="position: relative; top: -20px;">From design to implementation
+							</p> -->
+						</div>
+						<p>
+							The management of the scene was the most changed ascpect throughout development. Starting at
+							manually drawing each primitive, to recycling data usage with files and then moving to
+							implementing arrays, which were finialised as <b>Linked Lists</b>, each linked list is used
+							to split scene objects into shape catorgories. Changing between these management styles
+							often called for iterative practies, revisting and reevaluating old code to work with the
+							new mangement of the objects. While arrays are perfectly quick, I wanted to implement
+							dynamic changes to the lists at run time, such as changing individual values, or even
+							removing an object entirley. Frustratingly, I have not yet polished the ability to remove
+							objects, yet the system is still used to dyanamicly change the objects values at runtime.
+							<br><br>
+							I created a selection menu, the primitive objects with in the scene can be selected, when
+							this happens the objects texture will be swapped out alongside the camera being locked onto
+							the selected texture, this is done so that the user can view the object from any angle by
+							spinning the object in place, in any way they please. Speaking of the camera, I made the
+							decision to split it into its own class to allow for more dynamic/realistic controls to move
+							around the scene. I found some challange with this, as previously, I had simply been moving
+							the cameras eye and not its world position. However, I would say that taking the time to
+							understand the camera within graphics programming was the <b>single most important learning
+								experience</b> of this project. Understanding how a scene is actually generated, and how
+							this is <b>translated</b> so that it can be viewed at runtime. In future I would want to
+							implement a free-flying camera within graphics scenes, as currently the camera can only be
+							moved in world space along a certian plane.
+
+							<!-- <br><br>
+							<a class="text"
+								href="https://github.com/Stuart-Watkinson/parklife/blob/main/Assets/Scripts/Level%20Elements/PushableBox.cs">Code
+								- Pushable Box</a> -->
+						</p>
+
+						<h2>What was Learnt</h2>
+						<p>
+							While I have programmed a variety of programs throughout my studies and personal projects,
+							building this graphics scene was definitely one of the <b>most challenging</b>. Though, I do
+							not mean this in a negative connotation. This project was a chance for me to sit down and
+							truly understand systems that I only had a passing knowledge of before. While I have always
+							strived for optimisation within my code, having to manage memory and watch as memory leaks
+							happen to find the source, were both invaluable lessons in understanding my own coding and
+							how it can be used most effectivley.
+							<br><br>
+							On the topic of graphics itself, I have a new found apprection for the time and effort
+							needed for the graphics found in games today. I hope to build on my knowledge and
+							apperication as I progress ahead with my programming career. Understanding the time and
+							effort needed to achieve the breathe-taking results seen as the standard today.
+
+							<br><br>
+							<a class="text" href="https://github.com/Stuart-Watkinson/HelloGL">Project Repository</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
