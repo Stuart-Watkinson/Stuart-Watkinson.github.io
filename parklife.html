@@ -58,23 +58,23 @@
 						<div class="col-8 col-14-xsmall">
 							<div class="box">
 								<h3 style="position: relative; bottom: 20px; "><u>About</u></h3>
-								<p>This project was a marked assessment at the University of Staffordshire. Developed
-									using 6 sets of sprints, each lasting a single week , under the theme of “telling a
-									story”.</p>
+								<p>This project was a marked assessment at the University of Staffordshire. Developed through
+									using 6 sets of sprints, with each lasting a week, and being with the parameters of “telling a
+									story” as the overarching theme.</p>
 							</div>
 						</div>
 					</div>
 					<div style="position: relative; top: -70px">
 						<h2>Introduction</h2>
 						<p>
-							The theming of this project gave me a blank canvas to work with, one which gave me plenty of
-							opportunity for exploration into systems I had not managed to grasp in previous projects.
-							While the projects have been smaller in scale, I still find it imperative that I <b>push
-								myself</b> to learn optimisation techniques within my code. In line with that thought I
-							wanted to take another look at C# events and their usage within games.
+							The theme for this project allowed me a blank canvas to build upon and gave me lots of
+							opportunity to explore systems I had yet to perfect in previous projects.
+							Whilst previous projects were been smaller in scale, I found it imperative that I <b>pushed
+								myself</b> to learn optimal techniques within coding. Along those parameters I also
+							wanted to revisit C# events and their usages within games.
 							<br><br>
-							Furthermore, I wanted to experiment with creating unique combat systems for projects, to
-							give both players and enemies a different approach to combat than shooting or directly
+							Furthermore, I wanted to experiment with creating unique combat systems for projects, in order to
+							give players and antagonists a different combative approach than justy simply shooting, or directly
 							running into the player to provide a more unique experience.
 						</p>
 						<h2>C# Events</h2>
@@ -88,14 +88,14 @@
 							</p> -->
 						</div>
 						<p>
-							In previous projects I had began to implement C# events, using them to create a robust
-							player input controller. From both personal interest and a push from lecturers I decided to
-							delve deeper into using them. Previously I had been using references to connect code, what
-							while still having its uses within my code, the use of C# events allows for me to decouple
-							my code and follow the single dependency, and other such principles better. For this project
-							I have used C# events for <b>health related events</b> such as taking damage or dying, this
-							script didn’t need to share its functions publicly but could be used to send the needed data
-							to any of the <b>“subscribers”</b>, in this case the enemies and player character.
+							In previous projects I had experimented with implementing C# events, using them to create a robust
+							player input controller. From both personal motivation and encouragement from lecturers, I decided to
+							research into using C# events within my games. In prior projects I had been using references to connect code,
+							which did have its uses within my code but the use of C# events allowed for me to decouple
+							my code and follow the single dependency, enhancing my games. For this project
+							I used C# events for <b>health related events</b>, such as taking damage or dying. This
+							script didn’t need to share its functions publicly but it could be used to send the necessary data
+							to any of the <b>“subscribers”</b>, in this case the antagonists and player characters.
 
 							<br><br>
 							<a class="text"
@@ -113,19 +113,19 @@
 							</p> -->
 						</div>
 						<p>
-							The projects central mechanic was the players ability to shove into objects and enemies,
-							while the interaction with enemies was quite simple, creating an interact able object took a
-							different approach. I used unity’s collision system as a checker, once a player has
-							attempted to shove the object a ray cast is sent out in the opposite direction to find a
-							piece of the level. Which is then moved towards the found destination, casting a circle cast
-							to check for enemies collided with.
+							The central mechanic to this game was the players ability to push objects and antagonists.
+							Whilst interaction with antagonists was simple to include, creating an interactive object took more effort. 
+							I used Unity’s collision system so that once a player 
+							attempted to push the object, a ray cast would be sent out in the opposite direction to find a
+							piece within the level. It would then move towards the found target and would cast a circle perimeter
+							which scanned for antagonists to collide with.
 							<br><br>
-							After having feedback from play testers, I was told while the system was fun it felt like it
-							couldn’t be used more than a few times due to objects being stuck, thus I added a ‘bounce’.
-							This is where the problems arose, due to the system using world coordinations, reversing the
-							coordinates used for the initial movement resulted in the object trying to move to the other
-							side of the ‘world-space’. To remedy this I stored where the location the player hit the
-							object, before moving it towards that Vector for only a moment to unstick it.
+							After recieving feedback from play testers, I concluded that whilst the system was fun, it felt like it
+							couldn’t be used more than a few times due to objects being stuck. I amended this by adding a ‘bounce’ feature
+							but this caused issues due to the system using world coordinations, which countermanded the
+							coordinates used for the initial movement and resulted in the object trying to move to the other
+							side of the ‘world-space’. To amend this, the game now stored where the player hit the
+							object, before moving it towards that vector for only a moment to unstick it.
 
 							<br><br>
 							<a class="text"
@@ -134,22 +134,23 @@
 
 						<h2>What was Learnt</h2>
 						<p>
-							Originally I had conceptilised a different game concept. The game was following the idea of
-							'a walk through the park', focusing on the story aspect with the world around the player
-							changing, the idea was to have it move through the seasons as you got through the park.
-							While an interesting idea, I only had a short time frame to develop this prototype, and the
-							idea felt like it would be wasted and lack mechanics if used in prototyping. This shake-up
-							of concepts initally sent a wave of disruptions throughout the project, however due to
-							employing the use of <b>agile sprints</b>, I took a step back and re-evaluated the scope and
-							idea to fit into the smaller development window created by the set backs. Reusing the park
-							concept to instead tell a story of saving a park from bug infestion.
+							Originally I had imagined a different game concept that followed
+							<b>'a walk through the park</b>, focusing on a story aspect in which the world around the player
+							changed. The original idea was to have it move through the seasons as you progressed through the park.
+							Whilst it was a compelling idea, I only had a short time frame to develop this prototype, and the
+							idea felt like it would be unachievable to its full potential if used in prototyping. This change
+							of concepts initally caused disruptions throughout the project, but in
+							employing the use of <b>agile sprints</b>, I took a step back and reshaped the
+							idea to fit into the even smaller development window which had lessened from the shifting of concepts. 
+							I instead reused the park
+							concept to tell a story in which the plkayer had to save a park from an infestation of bugs.
 							<br><br>
-							What this experience taught me was the importance of being able to <b>adapt</b>. Whether
-							that be self-evaluted changes, or changes within a team software development is never a
-							straight line. The use of sprints allows for the progress of a project to be broken into
-							chunks to be evaluted at the start of each iteration. Agile sprints perfectly encapsulate my
-							work flow, allowing me to way up the 'weight' of getting whats needed done while still
-							leaving room for <b>experimentation and learning</b> where room can be found.
+							This experience taught me the importance of being able to <b>adapt</b> to unforseen circumstances. Whether
+							that be self-evaluted changes or changes within a team, software development is never a
+							straight line. The use of sprints allowed for the progress of this project to be broken into
+							sections that could be evaluted at the start of each iteration. Agile sprints perfectly encapsulated my
+							work flow in allowing me to weigh up the importance of getting certain sections done whilst still
+							leaving room for <b>experimentation and learning</b> to allow the game to thrive.
 
 							<br><br>
 							<a class="text"

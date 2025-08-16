@@ -68,18 +68,18 @@
 					<div style="position: relative; top: -70px">
 						<h2>Introduction</h2>
 						<p>
-							The goal of this project was to create a 2D Top-Down game with multipictive mechanics,
+							The goal of this project was to create a 2D Top-Down game with multiplicative mechanics,
 							providing a full gameplay experience. I really wanted to focus on the mechanics of this
 							project,
-							and ensure they are not only robust but fun to play around.
-							This want lead to me coming to idea of taking inspiration from vampire survivors,
-							as the horde survivor genre of games creates opporunity for a playground in where the
+							and ensure they are not only robust but fun to play.
+							This want led to me taking inspiration from vampire survivors,
+							as the horde survivor genre of games creates opportunity for a playground where
 							players can freely interact with the mechanics.
 							<br><br>
 							The focus of the games development went into the<b><i> crafting system</b></i>, <b><i>
 									shooting</b></i> and <b><i>high score save system</b></i>.
-							Each of these forced me to tackle problem solving outside of what I already knew,
-							to not only complete the project but also too create a product I was happy with. This was a
+							Each of these forced me to problem solve outside of what I already knew,
+							and to not only complete the project but also to create a product I was happy with. As this was a
 							solo project, I had the responsbility for all the games coding and design, art and assets
 							belong to their respective creators.
 						</p>
@@ -97,15 +97,15 @@
 						<p>
 							All three of these systems are built around Unity’s <b>Scriptable Objects</b> system.
 							Scriptable
-							objects are useful in reducing a projects memory usage by avoiding the need to create many
-							copies of the same values as it allows for singular copy in memory that is used as a
+							objects are useful in reducing a projects memory usage, by avoiding the need to create many
+							copies of the same values, it allows for a singular copy in the memory that is used as a
 							<b>reference</b>
 							for the stored values.
 							<br><br>
 							Due to the nature of creating a ‘horde-style’ game with constant item instantiations,
-							<b>performance was a key factor to consider</b> and wanting to use my project development as
+							<b>performance was a key factor to consider</b> and I wanted to use my project development as
 							a
-							means to better understand the unity engine all roads pointed to the use of Scriptable
+							means to better understand the unity engine with all roads pointing to the use of Scriptable
 							Objects.
 							<br><br>
 							The crafting system itself uses the objects ‘name’ variable to run a string search against
@@ -113,38 +113,36 @@
 							with each being changed to match the given recipe. This system could be improved by
 							allowing flexibility in the crafting process, rather than having to place items into
 							specific slots,
-							this is something I hope to rectify in the future, the method used was picked as it
+							which is something I hope to rectify in the future. The method used was picked as it
 							matched with the already established systems along side the use of scriptable
 							objects.
 							<br><br>
-							The inventory system allowed me to interact with Unity’s interface systems. Namely the
-							IDragHandler & IBegin(/End)DragHandler interfaces. Interfaces define functionality within a
-							Unity Project, the three I mentioned are pre-built interfaces that define drag & drop
-							functionality, this isn't a simple copy and paste job however, these interfaces simple
-							provide tools to simplfy the creation of systems and using these tools I created a dynamic
-							inventory to crafting item swap.
+							The inventory system allowed me to interact with Unity’s interface systems;
+							IDragHandler & IBegin(/End)DragHandler. These interfaces define functionality within a
+							Unity Project, with the three I mentioned being pre-built interfaces that define drag & drop
+							functionality. This isn't a simple copy and paste job however, these interfaces just
+							provide tools to simplfy the creation of systems, and in using these tools I included features such as a dynamic
+							inventory in which players can swap items.
 							<br><br>
 							<a class="text"
 								href="https://github.com/Stuart-Watkinson/Cheffin-ItUp/tree/main/Assets/Scripts/Inventory">Code
 								- Inventory</a>
 						<h2>Shooting</h2>
 						<p>
-							Early into development, the arrow keys were used to fire the player’s weapon. This meant
-							that
-							the player could only fire in up to 8 directions, this wasn’t ideal for a game where threats
-							can approach you from any given direction. I had to make the decision to implement mouse
-							shooting, to better suit the <b>overall design and game feel</b>.
+							Early in development, players used arrow keys to fire weapons meaning that players could only fire in up to 8 directions which wasn’t ideal for a game where threats
+							can approach you from any given direction. I instead made the decision to implement mouse
+							shooting, as it better suited the <b>overall design and game feel</b>.
 							<br><br>
-							From talking to peers and lecturers, I came to the hard conclusion that it wasn’t a simple
-							transition from one to the other. I needed to understand a certain level of vector maths.
-							After a lot of research and <i>a lot</i> of trial and error, I came to understand that I had
-							taken a wrong approach to applying what I learnt. I couldn’t simply add it onto what I had
-							already created, I needed to create something new.
+							When talking to peers and lecturers, I concluded that it wasn’t a simple
+							transition to change to mouse shooting. I needed to understand a certain level of vector maths and after
+							a lot of research and <i>a lot</i> of trial and error, I realised that I had
+							taken the wrong approach when applying what I learnt as I couldn’t simply add it onto what I had
+							already created but I needed to create something new.
 							<br><br>
-							This led to a much smoother development, the system came out with very few hiccups that I
+							This led to a much smoother development with the end result having  a few hiccups that I
 							cleaned up throughout the project. I had been treating the player as the firing point,
-							however what was needed instead was a disembodied component that rotates around the player,
-							almost acting as a invisible gun for the projectiles to be fired from.
+							however what was needed was a disembodied component that rotated around the player,
+							almost acting as an invisible gun for the projectiles to be fired from.
 							<br><br>
 							<a class="text"
 								href="https://github.com/Stuart-Watkinson/Cheffin-ItUp/blob/main/Assets/Scripts/Player/Weapons/ProjectileWeaponController.cs">Code
@@ -163,8 +161,8 @@
 						</div>
 						<p>
 							To provide a true gameplay loop, I wanted to add more player incentive outside of just
-							playing the game. This started as a simple scoring system, the player gains scores for
-							certain actions. Including; crafting, survival time, and monsters killed, which would then
+							playing the game. This started as a simple scoring system, with the player achieving points for
+							certain actions including; crafting, survival time, and monsters killed, which would then
 							be totalled throughout the playtime before being displayed on the final screen. This was an
 							incredibly simple addition that I added early on, but as the games development was coming to
 							an end, I came to realise I should try to do more with this system.
@@ -177,12 +175,12 @@
 							making it
 							easy to seralize/deseralize data to store game states locally on a players PC.
 							<br><br>
-							What this really means is a <b>convertation between C# objects/structures into JSON
+							What this really means is a <b>conversion of C# objects/structures into JSON
 								format</b>,
 							and vice versa. Having such a short time frame to research and implement JsonUtility into
 							the game, I was lucky to find that JSON is built to be easy for humans to read/write, and
 							simple for computers to parse the data. Using JSON I created a High Scores system, where a
-							players 10 highest scores is saved, this is then wrote to a .txt file locally on the
+							players 10 highest scores is saved, this is then written on a .txt file stored locally on the
 							computer
 							to be displayed on the main menu.
 							<br><br>
@@ -192,30 +190,26 @@
 						</p>
 						<h2>What was Learnt</h2>
 						<p>
-							This was the first game I had developed start to finish within a game’s engine, and as such
-							it was a major learning experience. Despite having coded for years this was the most freedom
-							I had felt to create within education, for better and for worse, and due to the solo nature
-							of the project I found myself under/overestimating the scope of the project constantly. On
-							that front the greatest lesson I learnt throughout the project was <b>planning</b>, while I had
-							plans for the project, I had underestimated how every component I wanted to develop was so
-							much easier to work with once I broke it down into digestible segments. Decomposition has
-							been a principle I have learnt about for years, it was here where its usage finally clicked,
-							and I found the project to feel more like a puzzle to be solved rather than a labyrinth that
-							I could run headfirst into.
+							This was the first game I had developed start to finish using a games engine, and because of this
+							it was a major learning experience. Despite having coded for years this was the most creative freedom
+							I've had in education, for better and for worse, and due to the solo nature
+							of the project I found myself under/overestimating the scope of the project constantly. The greatest lesson I learnt throughout the project was <b>structuring my time</b>. While I had
+							plans for the project, I had to learn that each component I wanted to develop would be
+							much easier to work with once broken down into smaller segments. The principle of splitting work up has
+							been one that I have learnt about for years, but it was here where its practicality finally clicked,
+							and I found the project become more like a puzzle to be solved rather than a labyrinth that
+							I had to run headfirst into.
 							<br><br>
-							This was massively assisted with communications amongst peers and mentors, despite the solo
-							nature of the project, I would often find that having someone to bounce off ideas with or
-							lend an ear to, gave me a deeper understanding of what I was working with before I tackled
-							issues, helping me improve on new and old techniques and skills. Being able to work in a
-							space where open communication was incentivised felt <b>rewarding</b> when I could make the
-							results with the feeing.
+							This was massively aided in communications with peers and mentors because despite the solo
+							nature of the project, I would often find that having someone to talk it through with, gave me a deeper understanding of what I was working with before I tackled
+							issues, helping me improve on my techniques and skills. Being able to work in a
+							space where open communication was encouraged felt <b>rewarding</b> when those conversations led to a successful change.
 							<br><br>
-							On the technical front the Unity Engine was great to work. My aim with this project was to
-							utilise the engine to the best capability I could to reach a better understanding of its
-							implementation. The use of tools such as prefabs, scriptable objects and unity events helped
-							me better come to terms with the engine. Alongside JSONUtlity, I found that the engine
-							directly assisted the development throughout and I hope to better understand other features
-							within the engine in the future.
+							In a technical context, Unity Engine was great to work with. My aim with this project was to
+							utilise the engine its full capacity so I could better understand the possibilities. The use of tools such as prefabs, scriptable objects and unity events helped
+							me come to terms with the engine. Alongside JSONUtlity, I found that the engine
+							directly assisted the development throughout and I hope to  understand other features
+							within the engine more in depth as I work on future projects.
 							<br><br>
 							<a class="text"
 								href="https://github.com/Stuart-Watkinson/Cheffin-ItUp">Project Repository</a>
