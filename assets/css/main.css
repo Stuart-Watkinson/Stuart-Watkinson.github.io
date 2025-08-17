@@ -2115,6 +2115,7 @@ input, select, textarea {
 		text-decoration: none;
 		border-bottom: none;
 		position: relative;
+		background-size: contain;
 	}
 
 		.icon:before {
@@ -2367,6 +2368,7 @@ input, select, textarea {
 		cursor: default;
 		list-style: none;
 		padding-left: 0;
+		background-size: contain;
 	}
 
 		ul.icons li {
