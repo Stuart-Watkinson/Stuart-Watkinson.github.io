@@ -2219,11 +2219,23 @@ input, select, textarea {
 			display: block;
 			margin: 2.5em 0;
 			width: 100%;
+			padding-bottom: 20px;
 		}
 
 			.image.main img {
 				width: 100%;
 			}
+
+		.image.sub {
+			display: block;
+			margin: 0.5em 0;
+			width: 100%;
+		}
+
+		.image.sub img {
+				width: 70%;
+			}
+
 
 			@media screen and (max-width: 736px) {
 
@@ -2231,7 +2243,14 @@ input, select, textarea {
 					margin: 1.5em 0;
 				}
 
+				.image.sub {
+					margin: 1.5em 0;
+					width: 100%;
+				}
 			}
+			
+
+			
 
 	.image-text
 	{
