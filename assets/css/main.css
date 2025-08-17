@@ -2155,6 +2155,8 @@ input, select, textarea {
 			height: 2em;
 			line-height: 2em;
 			text-align: center;
+			font-size: 20px;
+			padding-left: 5px;
 			width: 2em;
 		}
 
