@@ -216,7 +216,7 @@ input, select, textarea {
 	}
 
 	h4 {
-		color: #acb9e3;
+		color: #8caebb;
 		font-size: 1.1em;
 	}
 
@@ -3303,7 +3303,7 @@ input, select, textarea {
 		}
 
 			#header.alt.style1 .logo strong {
-				color: #6fc3df;
+				color: #a5c3ce;
 			}
 
 			#header.alt.style2 .logo strong {
@@ -3535,7 +3535,7 @@ input, select, textarea {
 			}
 
 		#banner.style1:after {
-			background-color: #6fc3df;
+			background-color: #8caebb;
 		}
 
 		#banner.style2:after {
@@ -4005,7 +4005,7 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-		background-color: #8ea9e8;
+		background-color: #8caebb;
 		border: 0;
 		border-radius: 5px;
 		box-shadow: inset 0 0 0 2px #ffffff;
@@ -4021,4 +4021,5 @@ input, select, textarea {
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
+		color: #ffffff;
 	}
