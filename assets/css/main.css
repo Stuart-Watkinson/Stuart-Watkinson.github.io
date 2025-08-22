@@ -3064,11 +3064,11 @@ input, select, textarea {
 		@media screen and (max-width: 1680px) {
 
 			.spotlights > section > .image {
-				width: 40%;
+				width: 60%;
 			}
 
 			.spotlights > section > .content {
-				width: 60%;
+				width: 40%;
 			}
 
 		}
@@ -3076,16 +3076,16 @@ input, select, textarea {
 		@media screen and (max-width: 1280px) {
 
 			.spotlights > section > .image {
-				width: 45%;
+				width: 70%;
 			}
 
 			.spotlights > section > .content {
-				width: 55%;
+				width: 35%;
 			}
 
 		}
 
-		@media screen and (max-width: 980px) {
+		@media screen and (max-width: 1100px) {
 
 			.spotlights > section {
 				display: block;
