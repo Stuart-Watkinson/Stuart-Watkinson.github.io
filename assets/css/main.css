@@ -24,7 +24,6 @@ section, summary, time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	overflow-x: hidden;
 }
 
 article, aside, details, figcaption, figure,
@@ -2192,6 +2191,7 @@ input, select, textarea {
 		display: inline-block;
 		position: relative;
 		max-width: 100%;
+		overflow-x: hidden;
 	}
 
 		.image img {
@@ -3000,7 +3000,7 @@ input, select, textarea {
 				border-radius: 0;
 				display: box;
 				position: relative;
-				width: 100%;
+				width: 50%;
 			}
 
 				.spotlights > section > .image img {
