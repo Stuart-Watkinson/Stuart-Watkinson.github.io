@@ -1798,7 +1798,7 @@ input, select, textarea {
 
 			header.major > :first-child:after {
 				content: '';
-				background-color: #ffffff;
+				background-color: #fff;
 				display: block;
 				height: 2px;
 				margin: 0em 0 0em 0;
@@ -3170,7 +3170,7 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		background-color: #242943;
+		background-color: #333856;
 		/* box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15); */
 		cursor: default;
 		font-weight: 600;
@@ -3672,6 +3672,15 @@ input, select, textarea {
 					}
 
 				}
+				@media screen and (max-width: 1280px) {
+
+					#main > * > .inner {
+						padding: 6em 0 1em 0 ;
+						width: calc(80% - 3em);
+					}
+
+				}
+
 
 		#main.alt {
 			background-color: transparent;
