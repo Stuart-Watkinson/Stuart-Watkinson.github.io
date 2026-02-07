@@ -2998,6 +2998,7 @@ input, select, textarea {
 				background-position: center center;
 				background-size: cover;
 				border-radius: 0;
+				
 				display: box;
 				position: relative;
 				width: 50%;
@@ -3007,6 +3008,7 @@ input, select, textarea {
 					border-radius: 0;
 					display: block;
 					width: 100%;
+					padding: 2%;
 				}
 
 				.spotlights > section > .image:before {
@@ -3039,7 +3041,7 @@ input, select, textarea {
 				-ms-align-items: center;
 				align-items: center;
 				padding: 0em 0em 0em 3em ;
-				width: 50%;
+				width: 60%;
 			}
 
 				.spotlights > section > .content > .inner {
