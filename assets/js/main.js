@@ -138,6 +138,11 @@
 				// Hide original.
 					$image.hide();
 
+				$function()
+				{
+					$("img").attr('src','http://example.com/image.gif')
+				}
+
 			// Link.
 				if ($link.length > 0) {
 
@@ -331,5 +336,6 @@
 						$menu._hide();
 
 			});
+		
 
 })(jQuery);
