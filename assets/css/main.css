@@ -2997,18 +2997,19 @@ input, select, textarea {
 			.spotlights > section > .image {
 				background-position: center center;
 				background-size: cover;
-				border-radius: 0;
-				
+				border-radius: 1;
 				display: box;
 				position: relative;
-				width: 50%;
+				width: 100%;
+				left: 5%;
 			}
 
 				.spotlights > section > .image img {
 					border-radius: 0;
 					display: block;
-					width: 100%;
+					width: 80%;
 					padding: 2%;
+					
 				}
 
 				.spotlights > section > .image:before {
@@ -3040,13 +3041,13 @@ input, select, textarea {
 				-webkit-align-items: center;
 				-ms-align-items: center;
 				align-items: center;
-				padding: 0em 0em 0em 3em ;
-				width: 60%;
+				padding: 0em 0em 0em em ;
+				width: 50%;
 			}
 
 				.spotlights > section > .content > .inner {
 					margin: 0 auto;
-					max-width: 100%;
+					max-width: 90%;
 					width: 65em;
 				}
 
@@ -3069,6 +3070,7 @@ input, select, textarea {
 
 			.spotlights > section > .image {
 				width: 60%;
+				right: 50%;
 			}
 
 			.spotlights > section > .content {
@@ -3081,6 +3083,7 @@ input, select, textarea {
 
 			.spotlights > section > .image {
 				width: 70%;
+	
 			}
 
 			.spotlights > section > .content {
@@ -3097,10 +3100,11 @@ input, select, textarea {
 
 				.spotlights > section > .image {
 					width: 100%;
+					left: 10%;
 				}
 
 				.spotlights > section > .content {
-					padding: 4em 3em 2em 3em ;
+					padding: 0em 0em 0em 3em ;
 					width: 100%;
 				}
 
@@ -3109,7 +3113,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			.spotlights > section > .content {
-				padding: 0em 0.5em 0em 1.5em ;
+				padding: 0em 0.5em 0em em ;
 			}
 
 			.spotlights > section > .image {
