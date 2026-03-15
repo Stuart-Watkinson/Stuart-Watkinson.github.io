@@ -41,7 +41,7 @@
 			<section id="one">
 				<div class="inner">
 					<header class="major">
-						<h1><span>Artillery Test - !WIP!</h1>
+						<h1><span>Artillery Test</h1>
 					</header>
 					<span class="image main"><img src="images/tankShowcase.gif" style="position: relative; top: -40px;"
 							alt="" /></span>
@@ -80,7 +80,15 @@
 						</div>
 
 						<p>
+							To form the base of the tanks suspension a Spring model needed to be created, which would move the suspension wheels based on any applied <b>displacement force</b>. A raycast points down from the arm of the suspension wheel towards the wheel itself, checking if the springs full length can be achieved. If not due to the raycast hitting an object, a displacement force is applied to the given wheel. Meaing the wheel & spring takes on the displacement, instead of the whole tank to create realistic smoother driving.  <br><br>
 							
+							The overall model used for the Tank's Suspension is a Mass-spring-damper model, this is where the wheels displacement force is calculated by doing: <br>
+							<b>Displacement Force = -(Stiffness Factor * displacement) - (Damping Factor * Spring Velocity)</b>
+							<br>
+
+							To create this dampener the idea of <b>Damped Oscillation</b>. Using a dampener meant that the Tank's springs would lose energy overtime, to not rock the tank constantly and instead adjust occurdingly to the current forces being applied.
+
+
 							<br><br>
 							<a class="text"
 								href="https://github.com/Stuart-Watkinson/Artillery-Test/blob/main/Assets/02-TankController-w012514o/Scripts/SuspensionArm.cs">Code
@@ -94,7 +102,9 @@
 									style="position: relative; top: -30px; " alt="" /></span>
 						</div>
 						<p>
-							
+							In previous project's I have used Unity's Canvas system to create UI. This an older system within unity and isn't suited for complex UI, instead for the project I experimented with the <b>Unity UI Toolkit</b>. I found the UI toolkit to suit my needs and skills very well, as it is built off of ideas such as HTML and CSS which I have worked with before <i>(even for this website)</i>. The main feature that drew me to the UI Toolkit was <b>Data Bindings</b>, allowing for a model of communication between the UI and script data that keeps them separate. 
+							<br><br>
+							Data Bindings use <b>3 core concepts</b>; Data Source, Data Source Path, & Binding Mode. For this project the UI's Binding Mode is <b>ToTarget</b>, meaning that the data is Read-Only for the UI keeping data communications to only what is necessary to its functionality. The above two showcases of the Tank's UI use seperate Data Source's one coming from the Tank's Drive Wheel and the other the Tank's Turret. As the data is binded the UI will update any time the specified value has been flagged as changed, with no need to constantly check through code.
 							<br><br>
 							<a class="text"
 								href="https://github.com/Stuart-Watkinson/Artillery-Test/blob/main/Assets/02-TankController-w012514o/Scripts/UIController.cs">Code
@@ -107,18 +117,22 @@
 									style="position: relative; top: -30px; " alt="" /></span>
 						</div>
 						<p>
-							
+							The Tank's Firing functionality is a simple rigid body force application. Though I wanted to build on this to create a more immersive firing experience, to achieve this I added a second camera mode which is <i>'over the shoulder'</i>. This is the state being showcased in the above video. When in this state the tank's barrel displays a <b>Fire Predication</b> line, which is adaptive to different tank firing speeds and bullet weight. 
+							<br><br>
+							To achieve this I used Unity <b>physics scenes</b>, creating a ghost scene to simulate how the current firing angle will fire a projectile. The physics scene is a sub-scene with non-visible level elements to be used within in calculations, this includes ghost projectiles which are fired only in this state, to better conserve processing power. Each Ghost Projectile has a trail attached which acts as the Fire Prediction Line. 
 							<br><br>
 							<a class="text"
 								href="https://github.com/Stuart-Watkinson/Artillery-Test/blob/main/Assets/02-TankController-w012514o/Scripts/FirePrediction.cs">Code
-								- Fire Prediction</a>
+								- Fire Prediction</a><br>
 								<a class="text"
 								href="https://github.com/Stuart-Watkinson/Artillery-Test/blob/main/Assets/02-TankController-w012514o/Scripts/WeaponController.cs">Code
 								- Weapon Controller</a>
 						</p>
 						<h2>What was Learnt</h2>
 						<p>
-							
+							This project offered me the opportunity to take a deeper dive into Unity, exploring new techniques and tools alongside working on critical programming skills. The project ran very smoothly, taking what I learnt from previous projects with time management to heart. This offered me time to really experiment and understand what I was trying out for the first time. This is especially true for the UI within the UI toolkit which I found to be a very wide topic.
+							<br><br>
+							Furthermore, this project allowed for me to put what I have learnt so far to the test. Talking with peers and lecturers I often found myself being pushed and growing from the work around me. while concepts such as Suspension and Physics simulations were relatively new to me, getting to work alongside others and keeping a span of communication and questions meant that a <b>rewarding</b> sense of growth was ever present throughout the project, as I was pushed further and further alongside those around me.
 							<br><br>
 							<a class="text"
 								href="https://https://github.com/Stuart-Watkinson/Artillery-Test">Project Repository</a>
