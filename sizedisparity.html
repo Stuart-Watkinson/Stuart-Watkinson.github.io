@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Stuart Watkinson | Cheffin' it Up</title>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image" href="/images/Logo.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header" class="style3">
+			<a href="index.html" class="logo"><strong>Back to home page</strong></a>
+			<nav>
+				<a href="https://github.com/Stuart-Watkinson" class="icon brands alt fa-github"><span
+						class="label">GitHub</span></a>
+				<a href="https://www.linkedin.com/in/stuart-watkinson-b33387334/"
+					class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a>
+			</nav>
+		</header>
+
+
+		<!-- Main -->
+		<div id="main" class="alt">
+
+			<!-- One -->
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h1><span>Size Disparity</h1>
+					</header>
+					<span class="image main"><img src="images/size-disparity-showcase.gif" style="position: relative; top: -40px;"
+							alt="" /></span>
+					<div class="row gtr-100" style="position: relative; top: -90px;">
+						<div class="col-4 col-14-xsmall">
+							<div class="box">
+								<h3 style="position: relative; bottom: 20px;"><u>Details</u></h3>
+								<p> <b>Role:</b> Gameplay Programmer<br> <b>Duration:</b> 8 Weeks
+									<br> <b>Team Size:</b> 1
+									<br><b>Engine:</b> Unreal Engine [C++]
+								</p>
+							</div>
+						</div>
+						<div class="col-8 col-14-xsmall">
+							<div class="box">
+								<h3 style="position: relative; bottom: 20px; "><u>About</u></h3>
+								<p>Size Disparity is a size based puzzle game, where pills found throughout the level change the size and abilities of the player character. The goal of this project was to explore the different applications of C++ within Unreal Engine Development, including how it can be used to assist the collaboration of Designers and Programmers.</p>
+							</div>
+						</div>
+					</div>
+					<div style="position: relative; top: -90px">
+						<h2>Introduction</h2>
+						<p>
+							In previous Unreal Engine projects I had used Blueprinting as a method of rapid prototyping and development. While blueprinting is an incridible tool, the speed and flexibility of C++ when used alongside the game developmenmt engine is undeniable. As this is the standard in Industry I wanted to take the opportunity to explore how custom C++ functionality aids within the Unreal Engines development cycle.
+							<br><br>
+							The project features the use of a custom built <i><b>weight component & interface</b></i>. These were built with modularity in mind, as such each interactable element could communicate via the weight <i>interface</i> rather instead of directed coupled communication.
+						</p>
+						<h2>Weight Interface & Component</h2>
+						<div>
+							<span class="image"><img src="images/size-weight-showcase.gif"
+									style="position: relative; top: -30px;" alt="" /></span>
+							<p class="image-text" style="position: relative; top: -20px;">
+						</div>
+
+						<p>
+							Over the span of the project I had the oppurtunity to research different programming <i>principles & paradigms</i>. Many of which propagated that when it comes to Object-Orietned Programming, modularity is the best practise the <b>SOLID</b> principles being a prime example of this. This research prompted me to look at how interfaces and components can be used within Unreal Engine to create modular systems, which can be further extended by designers in Blueprints.
+							<br><br>
+							While I had previously used pre-made interfaces, this was my first ventrue into making my own. I found the advantages to modular communications to be fascinating, as keeping the <b><i>weight interface</b></i> structurally simple allowed for any actor who could interact with the interface to get or set the weight of another actor when prompted with no need for direct coupling. 
+							<br><br>
+							This was furthered by the <i>weight component</i>, which focused on interacting with the players main mechanics. This allowed for the player to interact with the <i>size-changing pill</i> which would adjust the players size and variables. As this system was build with designer extendibility in mind, I would want to provide the player with additional mechanics when in different sizes, which could be nicely extended in C++ or Blueprints due to the structure being built for both.													
+							<br><br>
+							<a class="text"
+								href="https://github.com/Stuart-Watkinson/SizeDisparity/tree/main/Source/GamJam25/Public/PCH/Player%20Weight">Code
+								- Weight</a>
+						</p>
+						<h2>What was Learnt</h2>
+						<p>
+							This project gave me the opportunity to take a deep dive in the <i><b>framework</i></b> of Unreal Engine, and how it can be best used to bridge the gap between Programmer and Design work. Looking into UFunctions & UPropertys, and how their behaviour can be specified using MetaData tags helped me not only understand my own code, but also how systems can be extended with a whole team in mind.
+							<br><br>
+							Additionally this served as an opportunity to explore the benefits of using C++ within unreal engine, the flexibility, control and improved structure all serve to better any project it is implemented in. This was furthered by exploring the implemention of Design Patterns, such as the <i>Command Design Pattern<i>, which I had used for the character controller and weight interactions. Another pattern that would be important for this project, if it were to be extended, is Object Pooling. As an optimisation pattern it would be imperative at keeping performance needs low, especially as games expand and require more and more resuable elements.
+							<br><br>
+							<a class="text"
+								href="https://github.com/Stuart-Watkinson/SizeDisparity">Project Repository</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
